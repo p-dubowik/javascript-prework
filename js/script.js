@@ -1,6 +1,16 @@
-
+function printMessage(msg){
+    let div = document.createElement('div');
+    div.innerHTML = msg;
+    document.getElementById('messages').appendChild(div);
+}
+    
+function clearMessages(){
+    document.getElementById('messages').innerHTML = '';
+}
+    
 function playGame(arg) {
     
+    clearMessages();
     let playerInput = arg;
 
     function getMoveName(MoveID) {
@@ -21,16 +31,7 @@ function playGame(arg) {
     let playerMove = getMoveName(playerInput);
     
     
-    function printMessage(msg){
-        let div = document.createElement('div');
-        div.innerHTML = msg;
-        document.getElementById('messages').appendChild(div);
-    }
-    
-    function clearMessages(){
-        document.getElementById('messages').innerHTML = '';
-    }
-    
+
     console.log('Liczba '+RandomNumber);
     
     printMessage('Mój ruch to '+computerMove);
@@ -53,7 +54,7 @@ function playGame(arg) {
         }else if(argComputerMove == 'Papier' && argPlayerMove == 'Nożyce'){
             printMessage('Ty wygrywasz!');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Kamień'){ //cpu == nożyce
-            printMessage('Ty wygrywasz');
+            printMessage('Ty wygrywasz!');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Papier'){
             printMessage('Ja wygrywam!');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Nożyce'){
@@ -64,5 +65,20 @@ function playGame(arg) {
     }
     
     displayResult(computerMove, playerMove);
-    
 }
+
+
+
+let rockButton = document.getElementById('play-rock');
+let paperButton = document.getElementById('play-paper');
+let scissorsButton = document.getElementById('play-scissors');
+
+rockButton.addEventListener('click', function(){
+    playGame(1);
+});
+paperButton.addEventListener('click', function(){
+    playGame(2);
+});
+scissorsButton.addEventListener('click', function(){
+    playGame(3);
+});
