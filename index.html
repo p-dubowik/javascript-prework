@@ -5,21 +5,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-	<div class="container">
-		<div id="buttons">
-            <button id="play-rock">Kamień</button>
-            <button id="play-paper">Papier</button>
-            <button id="play-scissors">Nożyce</button>
+    <div class="game-structure">
+    
+        <div class="score">
+            <h2>0</h2>
+            <h2>-</h2>
+            <h2>0</h2>
         </div>
-		<div id="messages"></div>
-	</div>
-	<script src="js/functions.js"></script>
-	<script src="js/script.js"></script>
-
+        
+        <div class="container">
+            <div class='buttons' id="buttons">
+                <button class="choice" id="play-rock"><i class="fa-solid fa-hand-fist"></i></button>
+                <button class="choice" id="play-paper"><i class="fa-solid fa-hand"></i></button>
+                <button class="choice" id="play-scissors"><i class="fa-solid fa-hand-peace"></i></button>
+            </div>
+            <div id="messages"></div>
+        </div>
+        <script src="js/functions.js"></script>
+        <script src="js/script.js"></script>
+        
+    </div>
 </body>
 
 </html>

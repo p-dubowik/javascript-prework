@@ -1,3 +1,68 @@
+/* Global */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 
+html body {
+  background-color: rgba(128, 238, 253, 0.8);
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+.choice {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  font-size: 100px;
+  color: rgba(128, 238, 253, 0.8);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.choice:nth-child(1) {
+  color: red;
+}
+.choice:nth-child(2) {
+  color: green;
+}
+.choice:nth-child(3) {
+  color: blue;
+}
+.choice:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px 5px rgb(128, 238, 253) inset;
+}
+
+/* Game */
+.game-structure .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 60px;
+  font-size: 50px;
+  color: white;
+}
+.game-structure .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.game-structure .container .buttons {
+  display: flex;
+  gap: 3rem;
+}
+.game-structure .container #messages div {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
