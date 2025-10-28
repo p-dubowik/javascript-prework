@@ -1,4 +1,6 @@
 
+
+
 function playGame(arg) {
     
     clearMessages();
@@ -34,22 +36,29 @@ function playGame(arg) {
         console.log('moves:', computerMove, playerMove);
         if (argComputerMove == 'Kamień' && argPlayerMove == 'Papier') { //cpu == kamień
             printMessage('Ty wygrywasz!');
+            updateScore('resultPlayer');
         } else if(argComputerMove == 'Kamień' && argPlayerMove == 'Kamień'){
             printMessage('Remis');
         } else if(argComputerMove == 'Kamień' && argPlayerMove == 'Nożyce'){
             printMessage('Ja wygrywam!');
+            updateScore('resultCPU');
         }else if(argComputerMove == 'Papier' && argPlayerMove == 'Kamień'){ //cpu == papier
             printMessage('Ja wygrywam!');
+            updateScore('resultCPU');
         }else if(argComputerMove == 'Papier' && argPlayerMove == 'Papier'){
             printMessage('Remis');
         }else if(argComputerMove == 'Papier' && argPlayerMove == 'Nożyce'){
             printMessage('Ty wygrywasz!');
+            updateScore('resultPlayer');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Kamień'){ //cpu == nożyce
             printMessage('Ty wygrywasz!');
+            updateScore('resultPlayer');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Papier'){
             printMessage('Ja wygrywam!');
+            updateScore('resultCPU');
         }else if(argComputerMove == 'Nożyce' && argPlayerMove == 'Nożyce'){
             printMessage('Ty wygrywasz!');
+            updateScore('resultPlayer');
         }else{
             printMessage('Coś poszło nie tak :(');
         } 
